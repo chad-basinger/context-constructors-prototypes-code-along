@@ -10,7 +10,9 @@
 let user = {
 	username: "bencallis",
 	email: "bencallis1@gmail.com",
-    // Code here
+  getUserName: function(){
+                return user.username;
+              }
 };
 
 
@@ -31,7 +33,7 @@ let user1 = {
 };
 
 const getUsername = function () {
-    // Code here
+    return this.username;
 };
 
 const username = getUsername.call(user1);
@@ -57,7 +59,7 @@ function getOtherUsername() {
 };
 
 // Code here
-
+const otherUsername = getOtherUsername.call(user2);
 
 
 ////////// PROBLEM 4 //////////
@@ -72,7 +74,8 @@ function getOtherUsername() {
 */
 
 // Code here
-
+let username1 = getOtherUsername.call(user1);
+let username2 = getOtherUsername.call(user2);
 
 
 ////////// PROBLEM 5 //////////
@@ -94,7 +97,7 @@ function add(a, b, c) {
 }
 
 // Code here
-
+let result = add.apply(obj.num, nums(1, 2, 3))
 
 
 ////////// PROBLEM 6 //////////
